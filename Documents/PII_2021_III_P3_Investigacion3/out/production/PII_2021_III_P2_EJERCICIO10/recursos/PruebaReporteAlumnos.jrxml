@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PruebaReporteAlumnos" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68dcb259-506e-4fbe-bac6-4a6f5dafc3f3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT NumeroCuenta,DNI,Nombre,FechaNacimiento FROM Alumnos]]>
+	</queryString>
+	<field name="NumeroCuenta" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="NumeroCuenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="NumeroCuenta"/>
+	</field>
+	<field name="DNI" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="DNI"/>
+		<property name="com.jaspersoft.studio.field.label" value="DNI"/>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+	</field>
+	<field name="FechaNacimiento" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="FechaNacimiento"/>
+		<property name="com.jaspersoft.studio.field.label" value="FechaNacimiento"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="26" width="380" height="44" uuid="c7f77948-d426-40d4-8d10-bd1a4554eb4d"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ALUMNOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="0" width="100" height="30" uuid="2ec167b3-7cc5-4a7f-a051-6967b4c829fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="76568cd8-00bc-49bb-8712-69dcb5a332d1"/>
+				</reportElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="114" height="30" uuid="d193e030-fd5f-4796-9427-fcafee50a529">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17c09412-2746-431b-865c-adfefc811a1c"/>
+				</reportElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" uuid="eb358361-82ea-4e14-a9ff-04a6317ff3ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="33743fe0-ea01-4fb8-9031-1e32a9ec7234"/>
+				</reportElement>
+				<text><![CDATA[Numero de Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="0" width="100" height="30" uuid="a4f575fa-56d8-43b0-8321-911ebe7a770b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21306376-3e81-4c39-82c7-e1a5883d5e3b"/>
+				</reportElement>
+				<text><![CDATA[Fecha de Nacimiento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="15" width="100" height="30" uuid="254fbb5e-7f81-4b07-9884-9ab3571a8802">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="76568cd8-00bc-49bb-8712-69dcb5a332d1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="15" width="115" height="30" uuid="20ff8c77-d20c-4509-899b-cde17816a0a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17c09412-2746-431b-865c-adfefc811a1c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{DNI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="14" width="100" height="30" uuid="9b8b5392-5adb-4343-8b53-fa73e05e3c0f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="33743fe0-ea01-4fb8-9031-1e32a9ec7234"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{NumeroCuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="12" width="100" height="30" uuid="b365557b-082d-4080-ac6e-730781845682">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21306376-3e81-4c39-82c7-e1a5883d5e3b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{FechaNacimiento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="20" width="220" height="30" uuid="2c4ef3d7-d742-4e6e-8928-b8722e3a9929"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="350" y="20" width="153" height="30" uuid="7051821f-1671-4f7b-bf0d-e6a49161f22f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>
