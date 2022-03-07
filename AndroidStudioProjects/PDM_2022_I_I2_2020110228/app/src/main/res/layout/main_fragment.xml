@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <TextView
+        android:id="@+id/txvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="29dp"
+        android:text="Cálculo de Ecuaciones Cuadráticas"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtAlumno"
+        app:layout_constraintEnd_toEndOf="@+id/txtAlumno"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txtAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txvNombreAlumno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvNombreAlumno"
+        app:layout_constraintTop_toTopOf="@+id/txvNombreAlumno"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvNombreAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Nombre del Alumno:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txvExplain"
+        app:layout_constraintEnd_toStartOf="@+id/txtAlumno"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvExplain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="23dp"
+        android:text="Forma de las Ecuaciones Cuadráticas: \n\t\t\t\t\t\t\t\t\t\t\t\tax^2+bx+c=0"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/txtA"
+        app:layout_constraintStart_toStartOf="@+id/txtA"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="44dp"
+        android:text="a:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtB"
+        app:layout_constraintStart_toStartOf="@+id/txvB"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="278dp"
+        android:text="b:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="c:"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/txtB"
+        app:layout_constraintTop_toBottomOf="@+id/txtB"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txtA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/txva"
+        app:layout_constraintStart_toEndOf="@+id/txva"
+        app:layout_constraintTop_toTopOf="@+id/txva"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvSigno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="x^2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtA"
+        app:layout_constraintStart_toEndOf="@+id/txtA"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txtB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/txvB"
+        app:layout_constraintStart_toEndOf="@+id/txvB"
+        app:layout_constraintTop_toTopOf="@+id/txvB"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txtC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/txvC"
+        app:layout_constraintStart_toEndOf="@+id/txvC"
+        app:layout_constraintTop_toTopOf="@+id/txvC"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="18dp"
+        android:text="Resolver"
+        app:layout_constraintBottom_toTopOf="@+id/txvX1R"
+        app:layout_constraintStart_toEndOf="@+id/txvX1R"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvX1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginBottom="116dp"
+        android:text="X1:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvC"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvX2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X2:"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvX2R"
+        app:layout_constraintStart_toStartOf="@+id/txvX1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvX1R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="resultado x1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvX1"
+        app:layout_constraintStart_toEndOf="@+id/txvX1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvX2R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="14dp"
+        android:hint="resultado x2"
+        app:layout_constraintStart_toEndOf="@+id/txvX2"
+        app:layout_constraintTop_toBottomOf="@+id/txvX1"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
